@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Extensions to Object.prototype functionality",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tmikeschu/object-extensions.git"
+  },
   "scripts": {
     "test": "jest",
     "precommit": "lint-staged",
