@@ -1,6 +1,6 @@
 {
   "name": "object-extensions",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Extensions to Object.prototype functionality",
   "main": "dist/bundle.js",
   "repository": {
