@@ -2,7 +2,7 @@
   "name": "object-extensions",
   "version": "1.0.1",
   "description": "Extensions to Object.prototype functionality",
-  "main": "lib/index.js",
+  "main": "dist/bundle.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/tmikeschu/object-extensions.git"

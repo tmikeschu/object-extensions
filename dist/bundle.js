@@ -107,11 +107,18 @@ Object.defineProperty(exports, "__esModule", {
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 Object.prototype.map = function (fn) {
   var _this = this;
 
   return Object.keys(this).reduce(function (acc, x) {
-    return _extends({}, acc, fn(x, _this[x]));
+    var mapped = fn(x, _this[x]);
+    var valid = (typeof mapped === "undefined" ? "undefined" : _typeof(mapped)) === "object" && !Array.isArray(mapped);
+    if (!valid) {
+      throw "Function must return an object {}";
+    }
+    return _extends({}, acc, mapped);
   }, {});
 };
 
